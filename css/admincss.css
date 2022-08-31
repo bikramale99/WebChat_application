@@ -1,0 +1,40 @@
+#loginform {
+    height: 100%px;
+    width: 25%;
+    margin-left: 35%;
+    margin-top: 10%;
+	background-color:#blue;
+margin-top: -82px;
+}
+#chatbox{
+	
+	height:500px;
+	weight:500px;
+	border:2px solid red;
+}
+#logout{
+	margin-left:400px;
+	color:black;
+	
+	
+}
+#container{
+	position:relative;
+	
+border: 2px solid black;
+	height: 421px;
+width: 500px;
+overflow: auto;
+float: left;
+background-color: #c5e9ea;
+margin-left: px;
+margin-top:px;
+	
+}
+.chat-header{
+	    position: absolute;
+    background-color: #f0650e;
+    margin-top: 0px;
+    width: 480px;
+}
+}

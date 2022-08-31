@@ -1,0 +1,19 @@
+#loginform {
+    height: 100%px;
+    width: 25%;
+    margin-left: 35%;
+    margin-top: 10%;
+	background-color:#blue;
+}
+#chatbox{
+	
+	height:500px;
+	weight:500px;
+	border:2px solid red;
+}
+#container{
+	height:600;
+	widhth:500;
+	background-color:red;
+	
+}

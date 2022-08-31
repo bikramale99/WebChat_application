@@ -1,0 +1,186 @@
+<?php
+
+include("header.php");
+
+	if(isset($_GET["mode"])) {	
+	$mode=$_GET["mode"];
+						}
+?>
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url(images/background/bg-page-title-7.jpg);">
+    	<div class="auto-container">
+        	<h1>Doctors</h1>
+        </div>
+    </section>
+    
+    
+    <!--Sidebar Page-->
+    <div class="sidebar-page-container">
+    	<!--Tabs Box-->
+        <div class="auto-container tabs-box">
+            <div class="row clearfix">
+                
+                
+                <!--Content Side-->	
+                <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                    
+                    <!--Projects Section-->
+                    <section class="blog-news-section two-column no-padd-bottom no-padd-top padd-right-10">
+                    	<div class="row clearfix">        
+                        
+						
+
+								  <?php
+									$sql=" SELECT * FROM doctor ";
+									//echo $sql;
+									$result = mysqli_query($connection,$sql) or die(mysqli_error());
+									while($row = mysqli_fetch_assoc($result)) 
+								{
+									//	echo "<tr>";
+									
+										//echo "<td>".$row['heading']."</td>";
+										//echo "<td>".substr($row['about_description'],0,100)."</td>";
+										//echo "<td> <img width='80' height='80' src='../img/".$row['image']."'></td>";
+										//echo "<td>  <a href=aboutupdate.php?id=".$row['about_id'].">Update</a> <a onclick='return confirmDel()' href=?mode=del&id=".$row['about_id'].">Delete</a> </td>";
+										
+										//echo "</tr>";	
+									
+										 
+								   //<!--News Column-->
+										echo" <div class="column blog-news-column margin-bott-50 col-md-6 col-sm-6 col-xs-12">
+												echo "<article class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">";
+										   echo" <figure class="image-box">";
+											   echo"<a href="#">";
+											   echo"<img src='images/".$row['image']."' alt=""></a>";
+											  
+											echo "</figure>";
+											echo "<div class="content-box">";
+												echo "<h3>".$row['dname']."</h3>";
+												echo "<ul class="post-info clearfix">";
+												  //  echo "<li>By <a href="#">Admin</a></li><li>In <a href="#">Finance</a></li><li><a href="#">07 Comments</a></li>";
+												echo"</ul>";
+												echo "<div class="text">Here's the story of a man named Brady who was busy with three boys of his own. It's time to play the music. It's time to light the lights. It's time to meet. </div>";
+											echo "</div>";
+										echo"</article>";
+									echo" </div>";
+								}
+                             ?>
+                        </div>
+                        <!-- Styled Pagination -->
+                        <div class="styled-pagination text-center">
+                            <ul>
+                                <li><a class="prev" href="#"><span class="fa fa-angle-double-left"></span></a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#" class="active">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a class="next" href="#"><span class="fa fa-angle-double-right"></span></a></li>
+                            </ul>
+                        </div>
+                        
+                    </section>
+                
+                    
+                </div>
+                <!--Content Side-->
+                
+                <!--Sidebar-->	
+                <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                    <aside class="sidebar">
+                    
+                        <!-- Search Form -->
+                        <div class="sidebar-widget search-box">
+                            <div class="sidebar-title"><h2>Search</h2></div>
+                            <form method="post" action="http://wp1.themexlab.com/html/consult_pro_new/consultant-pro/index.html">
+                                <div class="form-group">
+                                    <input type="search" name="search-field" value="" placeholder="Search Here">
+                                    <button type="submit"><span class="icon fa fa-search"></span></button>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        
+                        <!-- Popular Categories -->
+                        <div class="sidebar-widget popular-categories wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="sidebar-title"><h2>Categories</h2></div>
+                            
+                            <ul class="list">
+                            	<li><a href="#">Accounting</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Budget</a></li>
+                                <li><a href="#">Finance</a></li>
+                                <li><a href="#">Investment</a></li>
+                                <li><a href="#">Mortage</a></li>
+                                <li><a href="#">Stock Trade</a></li>
+                            </ul>
+                            
+                        </div>
+                        
+                        
+                        <!-- Recent Posts -->
+                        <div class="sidebar-widget recent-posts wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="sidebar-title"><h2>Latest News</h2></div>
+                            
+                            <article class="post">
+                            	<figure class="post-thumb"><img src="images/resource/post-thumb-4.jpg" alt=""></figure>
+                                <h4><a href="#">Believe it or not its just me. Come and dance on our</a></h4>
+                                <div class="post-info">March 15, 2016</div>
+                            </article>
+                            
+                            <hr class="separator">
+                            
+                             <article class="post">
+                            	<figure class="post-thumb"><img src="images/resource/post-thumb-5.jpg" alt=""></figure>
+                                <h4><a href="#">Give us any rule we'll break it we're gonna make</a></h4>
+                                <div class="post-info">March 14, 2016</div>
+                            </article>
+                            
+                            <hr class="separator">
+                            
+                            <article class="post">
+                            	<figure class="post-thumb"><img src="images/resource/post-thumb-6.jpg" alt=""></figure>
+                                <h4><a href="#">Its like a kind of torture to have to watch</a></h4>
+                                <div class="post-info">March 12, 2016</div>
+                            </article>
+                            
+                            
+                        </div>
+                        
+                        <!-- Text Widget -->
+                        <div class="sidebar-widget text-widget">
+                            <div class="sidebar-title"><h2>Text Widget</h2></div>
+                            
+                            <div class="text">So lets make the most of this beautiful day. Since we're together, Go Speed Racer. Go Speed Racer. Go Speed Racer go. Here's the story of a lovely lady who was bringing up three very lovely girls. </div>
+                            
+                        </div>
+                        
+                        <!-- Popular Tags -->
+                        <div class="sidebar-widget popular-tags">
+                            <div class="sidebar-title"><h2>Usefull Tags</h2></div>
+                            
+                            <a href="#">Account</a>
+                            <a href="#">Advisor</a>
+                            <a href="#">Agents</a>
+                            <a href="#">Business</a>
+                            <a href="#">Budgets</a>
+                            <a href="#">Debts</a>
+                            <a href="#">Finance</a>
+                            <a href="#">Investments</a>
+                            
+                        </div>
+                                
+                    </aside>
+                
+                    
+                </div>
+                <!--Sidebar-->  
+                
+                      
+                
+            </div>
+        </div>
+    </div>
+    
+    
+<?php
+include("footer.php");
+?>
